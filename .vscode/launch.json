@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch MainClass",
+            "request": "launch",
+            "mainClass": "pack.MainClass",
+            "projectName": "Sorting Algorythm GUI_bde782bb"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainClass",
+            "request": "launch",
+            "vmArgs": "--module-path D:\\JAVAFX\\javafx-sdk-11.0.2\\lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "MainClass",
+            "projectName": "Sorting Algorythm GUI_bde782bb"
+        }
+    ]
+}
