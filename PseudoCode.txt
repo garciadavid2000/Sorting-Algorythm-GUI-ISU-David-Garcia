@@ -1,0 +1,19 @@
+create scene
+
+add button root to scene
+
+show stage
+
+ask for input
+
+wait for button press
+
+change root in scene
+
+generate bars based on number in textfield
+
+fullscreen
+
+shuffle bars
+
+sort bars based on button pressed
