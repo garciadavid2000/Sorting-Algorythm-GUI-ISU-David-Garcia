@@ -31,17 +31,18 @@ public class MainClass extends Application {
     public void start(Stage stage) throws Exception {
         bars = new HBox();
         menubars = new VBox();
-        
-        l1 = new Label("Enter the number of bars you would like to sort (850 or less) and select how you would like to sort them");
+
+        l1 = new Label(
+                "Enter the number of bars you would like to sort (850 or less) and select how you would like to sort them");
         b1 = new Button("Bubble Sort");
         b2 = new Button("Insertion Sort");
         field = new TextField();
 
         menubars.getChildren().addAll(l1, b1, b2, field);
         menubars.setAlignment(Pos.BASELINE_CENTER);
-        
+
         bars.setAlignment(Pos.BOTTOM_CENTER);
-        
+
         scene = new Scene(menubars, 600, 105);
         Image icon = new Image("sans lol.png");
         stage.getIcons().add(icon);
@@ -49,74 +50,71 @@ public class MainClass extends Application {
         stage.setResizable(true);
         stage.setScene(scene);
 
-
-        b1.setOnAction(new EventHandler<ActionEvent>(){
+        b1.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent arg0) {
                 stage.setFullScreenExitHint("");
                 stage.setFullScreen(true);
                 scene.setRoot(bars);
-                
+
                 generateRectangles(getFieldNumber());
 
                 BubbleSort sort = new BubbleSort();
 
-                AnimationTimer timer = new AnimationTimer(){
+                AnimationTimer timer = new AnimationTimer() {
 
                     @Override
                     public void handle(long arg0) {
                         if (sort.sort()) {
                             stop();
                         }
-                        
+
                     }
-                    
+
                 };
-                
+
                 timer.start();
-                
+
             }
-            
+
         });
 
-        b2.setOnAction(new EventHandler<ActionEvent>(){
+        b2.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent arg0) {
                 stage.setFullScreenExitHint("");
                 stage.setFullScreen(true);
                 scene.setRoot(bars);
-                
+
                 generateRectangles(getFieldNumber());
 
                 SelectionSort sort = new SelectionSort();
 
-                AnimationTimer timer = new AnimationTimer(){
+                AnimationTimer timer = new AnimationTimer() {
 
                     @Override
                     public void handle(long arg0) {
                         if (sort.sort()) {
                             stop();
                         }
-                        
+
                     }
-                    
+
                 };
-                
+
                 timer.start();
-                
+
             }
-            
+
         });
-        
+
         stage.show();
-        
-        
-        
+
     }
 
-    public void generateRectangles(int numOfRectangles){
+    public void generateRectangles(int numOfRectangles) {
         double rectangleBase = 895 / numOfRectangles;
         for (int i = 0; i < numOfRectangles; i++) {
             bars.getChildren().add(new Rectangle(1000 / numOfRectangles, rectangleBase * i, Color.BLACK));
@@ -124,8 +122,8 @@ public class MainClass extends Application {
 
     }
 
-    public int getFieldNumber(){
+    public int getFieldNumber() {
         return Integer.parseInt(field.getText());
     }
-    
+
 }
