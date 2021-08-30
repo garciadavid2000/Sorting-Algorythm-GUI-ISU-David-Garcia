@@ -117,7 +117,7 @@ public class MainClass extends Application {
     public void generateRectangles(int numOfRectangles) {
         double rectangleBase = 895 / numOfRectangles;
         for (int i = 0; i < numOfRectangles; i++) {
-            bars.getChildren().add(new Rectangle(1000 / numOfRectangles, rectangleBase * i, Color.RED));
+            bars.getChildren().add(new Rectangle(1000 / numOfRectangles, rectangleBase * i, Color.BLACK));
         }
 
     }
