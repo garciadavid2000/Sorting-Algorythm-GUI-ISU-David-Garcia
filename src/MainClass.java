@@ -35,7 +35,7 @@ public class MainClass extends Application {
         l1 = new Label(
                 "Enter the number of bars you would like to sort (850 or less) and select how you would like to sort them");
         b1 = new Button("Bubble Sort");
-        b2 = new Button("Insertion Sort");
+        b2 = new Button("Selection Sort");
         field = new TextField();
 
         menubars.getChildren().addAll(l1, b1, b2, field);
